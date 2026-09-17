@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Cinzel';
+  src: url('./fonts/Cinzel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('./fonts/Cinzel-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinzel Decorative';
+  src: url('./fonts/CinzelDecorative-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('./fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('./fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-dark: #09090d;
+  --bg-surface: #12121a;
+  --bg-surface-light: #1a1a26;
+  --gold-primary: #d4af37;
+  --gold-light: #f5e5b8;
+  --gold-dark: #8a7020;
+  --amber-glow: #e67e22;
+  --soul-cyan: #38bdf8;
+  --emerald-accent: #0f382c;
+  --border-gold: rgba(212, 175, 55, 0.25);
+  --border-gold-glow: rgba(212, 175, 55, 0.5);
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --font-title: "Cinzel Decorative", serif;
+  --font-deco: "Cinzel", serif;
+  --font-sub: "Cormorant Garamond", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(9, 9, 13, 0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.logo-icon svg.mystic-eye {
+    width: 1em;
+    height: 1em;
+    font-size: 1.7em;
+    fill: var(--gold-primary);
+    display: block;
+}
+
+.brand-title {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold-primary)
+}
+
+.brand-sub {
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-size: 0.8rem;
+  color: rgba(212, 175, 55, 0.7);
+  letter-spacing: 0.15em;
+  display: block;
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-deco);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold-primary);
+}
+
+.btn-reservation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  border: 1px solid var(--gold-primary);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-primary);
+  font-family: var(--font-title);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-reservation:hover {
+  background: var(--gold-primary);
+  color: #000;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
