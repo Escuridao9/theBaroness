@@ -1,54 +1,54 @@
 @font-face {
-  font-family: 'Cinzel';
-  src: url('./fonts/Cinzel-Regular.ttf') format('truetype');
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cinzel';
-  src: url('./fonts/Cinzel-Bold.ttf') format('truetype');
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cinzel Decorative';
-  src: url('./fonts/CinzelDecorative-Bold.ttf') format('truetype');
+  font-family: "Cinzel Decorative";
+  src: url("./fonts/CinzelDecorative-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('./fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-family: "Cormorant Garamond";
+  src: url("./fonts/CormorantGaramond-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('./fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-family: "Cormorant Garamond";
+  src: url("./fonts/CormorantGaramond-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('./fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+  font-family: "Plus Jakarta Sans";
+  src: url("./fonts/PlusJakartaSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('./fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-family: "Plus Jakarta Sans";
+  src: url("./fonts/PlusJakartaSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -345,3 +345,338 @@ header {
     letter-spacing: 0.08em;
   }
 }
+
+.menu {
+    background: rgba(0, 0, 0, 0.4); 
+    border-top: 1px solid var(--border-gold);
+}
+
+.menu-radio {
+  display: none;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.tab-label {
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-gold);
+  background: rgba(18, 18, 26, 0.6);
+  color: var(--text-main);
+  font-family: var(--font-deco);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.tab-label:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+#radio-coffee:checked ~ .menu-tabs label[for="radio-coffee"],
+#radio-tea:checked ~ .menu-tabs label[for="radio-tea"],
+#radio-bakery:checked ~ .menu-tabs label[for="radio-bakery"],
+#radio-cocktails:checked ~ .menu-tabs label[for="radio-cocktails"] {
+  background: var(--gold-primary);
+  color: #000;
+  font-weight: 700;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.menu-panel {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@media (min-width: 768px) {
+  .menu-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu-panel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#radio-coffee:checked ~ .menu-panels #panel-coffee,
+#radio-tea:checked ~ .menu-panels #panel-tea,
+#radio-bakery:checked ~ .menu-panels #panel-bakery,
+#radio-cocktails:checked ~ .menu-panels #panel-cocktails {
+  display: grid;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Menu Item Card Styling */
+.menu-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  gap: 1rem;
+}
+
+.item-title {
+  font-family: var(--font-deco);
+  font-size: 1.05rem;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.item-price {
+  font-family: var(--font-deco);
+  font-size: 0.9rem;
+  color: var(--amber-glow);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.item-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.menu-card-footer {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-dossier {
+  font-family: var(--font-deco);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.btn-dossier:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Pure CSS Lightbox Trigger using :target */
+.modal-overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  max-width: 550px;
+  width: 100%;
+  padding: 2.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--gold-primary);
+  box-shadow:
+    0 0 50px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(212, 175, 55, 0.15);
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay:target .modal-card {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--gold-primary);
+}
+
+.modal-tag {
+  font-family: var(--font-deco);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.modal-title {
+  font-family: var(--font-deco);
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.modal-price {
+  font-family: var(--font-deco);
+  font-size: 1.1rem;
+  color: var(--amber-glow);
+  margin-bottom: 1.5rem;
+}
+
+.modal-section-title {
+  font-family: var(--font-deco);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.modal-body-text {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.modal-lore-text {
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.btn-primary {
+            padding: 0.9rem 2.2rem;
+            border-radius: 4px;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            color: #000;
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.15);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            padding: 0.9rem 2.2rem;
+            border-radius: 4px;
+            background: rgba(18, 18, 26, 0.8);
+            border: 1px solid var(--border-gold-glow);
+            color: var(--gold-primary);
+            font-family: var(--font-title);
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold-primary);
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            font-family: var(--font-title);
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-deco);
+            color: var(--gold-primary);
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-sub);
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }

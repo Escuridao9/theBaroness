@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Cursed Apple</title>
+    <title>The Astral Patron</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -53,11 +53,346 @@
           <h1 class="hero-title">THE ASTRAL PATRON</h1>
 
           <div class="hero-actions">
-            <a href="#menu" class="btn-menu">Explore The Artisanal Menu</a>
-            <a href="#parlors" class="btn-reservation">Reserve A Parlor Booth</a>
+            <a href="#menu" class="btn-primary">Explore The Artisanal Menu</a>
+            <a href="#parlors" class="btn-secondary"
+              >Reserve A Parlor Booth</a
+            >
           </div>
         </div>
       </section>
+
+      <section class="menu">
+        <div class="section container">
+          <div class="section-header">
+            <h2 class="section-title">THE ARTISANAL MENU</h2>
+          </div>
+
+          <div class="menu-system">
+            <input
+              type="radio"
+              name="menu-category"
+              class="menu-radio"
+              id="radio-coffee"
+              checked
+            />
+            <input
+              type="radio"
+              name="menu-category"
+              class="menu-radio"
+              id="radio-tea"
+            />
+            <input
+              type="radio"
+              name="menu-category"
+              class="menu-radio"
+              id="radio-bakery"
+            />
+            <input
+              type="radio"
+              name="menu-category"
+              class="menu-radio"
+              id="radio-cocktails"
+            />
+
+            <div class="menu-tabs">
+              <label for="radio-coffee" class="tab-label"
+                >Essence Roasts & Espresso</label
+              >
+              <label for="radio-tea" class="tab-label"
+                >Botanical Elixirs & Teas</label
+              >
+              <label for="radio-bakery" class="tab-label"
+                >Patisserie & Savories</label
+              >
+              <label for="radio-cocktails" class="tab-label"
+                >Midnight Cocktails</label
+              >
+            </div>
+
+            <div class="menu-panels">
+              <div class="menu-panel" id="panel-coffee">
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Spiritist Dark Roast</h3>
+                      <span class="item-price">$6.50</span>
+                    </div>
+                    <p class="item-desc">
+                      Triple-extracted espresso with cardamom, roasted cocoa
+                      nibs, and smoky oak undertones.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-1" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Infernus Amber Latte</h3>
+                      <span class="item-price">$7.50</span>
+                    </div>
+                    <p class="item-desc">
+                      Spiced chili-caramel double espresso layered with silky
+                      warm oat milk foam.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-2" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Paradox Temporal Cold Drip</h3>
+                      <span class="item-price">$8.00</span>
+                    </div>
+                    <p class="item-desc">
+                      Slow 12-hour cold drip coffee served over hand-carved
+                      crystal ice spheres.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-3" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-panel" id="panel-tea">
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Lotus Bloom Tisane</h3>
+                      <span class="item-price">$7.00</span>
+                    </div>
+                    <p class="item-desc">
+                      Steeped white tea leaves infused with dried night lotus
+                      petals and lemongrass.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-4" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Ivy's Granite Herbal Tonic</h3>
+                      <span class="item-price">$6.75</span>
+                    </div>
+                    <p class="item-desc">
+                      Earthy mountain thyme, wild sage, and elderberry sweetened
+                      with raw clover honey.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-5" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-panel" id="panel-bakery">
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">The Cursed Apple Tart</h3>
+                      <span class="item-price">$9.50</span>
+                    </div>
+                    <p class="item-desc">
+                      Flaky puff pastry filled with caramelized Hudson Valley
+                      apples and Madagascar vanilla glaze.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-6" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Smoked Pastrami Sourdough</h3>
+                      <span class="item-price">$14.50</span>
+                    </div>
+                    <p class="item-desc">
+                      House-cured beef pastrami, melted Gruyère, and brown
+                      mustard on toasted artisan sourdough.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-7" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-panel" id="panel-cocktails">
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">The Patron's Rye & Velvet</h3>
+                      <span class="item-price">$16.00</span>
+                    </div>
+                    <p class="item-desc">
+                      Aged rye whiskey, sweet vermouth, dark cherry bark
+                      bitters, and smoked cedar aura.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-8" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+
+                <div class="deco-border menu-card">
+                  <div>
+                    <div class="menu-card-header">
+                      <h3 class="item-title">Soul-Mist Lavender Fizz</h3>
+                      <span class="item-price">$15.50</span>
+                    </div>
+                    <p class="item-desc">
+                      Artisanal gin, botanical lavender syrup, fresh lemon
+                      juice, and sparkling soda.
+                    </p>
+                  </div>
+                  <div class="menu-card-footer">
+                    <a href="#modal-item-9" class="btn-dossier">View More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div id="modal-item-1" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Essence Roasts & Espresso</span>
+                <h3 class="modal-title gold-gradient-text">Spiritist Dark Roast</h3>
+                <div class="modal-price">$6.50</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Rich, velvet mouthfeel with notes of dark cacao, roasted cardamom, and a lingering smoky oak finish.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">Favored by the street mystics of Lower Manhattan who gather at dawn to clear their thoughts before morning rituals.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-2" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Essence Roasts & Espresso</span>
+                <h3 class="modal-title gold-gradient-text">Infernus Amber Latte</h3>
+                <div class="modal-price">$7.50</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Initial caramel sweetness followed by a gentle cayenne warmth that energizes the palate.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">Named after the fiery bar baron Infernus. Formulated to keep patrons warm during harsh New York winter nights.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-3" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Essence Roasts & Espresso</span>
+                <h3 class="modal-title gold-gradient-text">Paradox Temporal Cold Drip</h3>
+                <div class="modal-price">$8.00</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Crisp floral aromatics giving way to deep plum and subtle star anise notes.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">Brewed using a custom brass glass tower designed by arcanist engineers to ensure precise extraction timing.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-4" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Botanical Elixirs & Teas</span>
+                <h3 class="modal-title gold-gradient-text">Lotus Bloom Tisane</h3>
+                <div class="modal-price">$7.00</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Delicate floral aroma with a clean citrus brightness and soothing herbal finish.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">Steeped for councilors seeking mental clarity during high-stakes negotiations in the private parlors.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-5" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Botanical Elixirs & Teas</span>
+                <h3 class="modal-title gold-gradient-text">Ivy's Granite Herbal Tonic</h3>
+                <div class="modal-price">$6.75</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Earthy, herbaceous grounding profile with a sweet elderberry undertone.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">Crafted in honor of the gargoyle guardians who keep watch over New York’s Gothic rooftops.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-6" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Patisserie & Savories</span>
+                <h3 class="modal-title gold-gradient-text">The Cursed Apple Tart</h3>
+                <div class="modal-price">$9.50</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Flaky butter crust paired with tart apple slices and warm Madagascar vanilla glaze.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">A staple patisserie piece representing the forbidden allure of New York’s arcane secrets.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-7" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Patisserie & Savories</span>
+                <h3 class="modal-title gold-gradient-text">Smoked Pastrami Sourdough</h3>
+                <div class="modal-price">$14.50</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Savory, smoky pastrami balanced by rich melted Gruyère and tangy rye sourdough.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">A hearty staple for street captains and neighborhood enforcers taking a reprieve from the docks.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-8" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Midnight Cocktails</span>
+                <h3 class="modal-title gold-gradient-text">The Patron's Rye & Velvet</h3>
+                <div class="modal-price">$16.00</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Bold oak and rye spice softened by velvet cherry undertones and lingering aromatic smoke.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">The house signature spirit poured for high council meetings and neutral-ground pacts.</p>
+            </div>
+        </div>
+
+
+        <div id="modal-item-9" class="modal-overlay">
+            <div class="modal-card">
+                <a href="#menu" class="modal-close">&times;</a>
+                <span class="modal-tag">Midnight Cocktails</span>
+                <h3 class="modal-title gold-gradient-text">Soul-Mist Lavender Fizz</h3>
+                <div class="modal-price">$15.50</div>
+                <span class="modal-section-title">Tasting Notes</span>
+                <p class="modal-body-text">Refreshing citrus burst paired with soothing botanical lavender and effervescent fizz.</p>
+                <span class="modal-section-title">Lore Origin</span>
+                <p class="modal-lore-text">Served with a gentle vapor float designed to mimic the ethereal mist of the Astral Plane.</p>
+            </div>
+        </div>
+
+
     </main>
   </body>
 </html>
