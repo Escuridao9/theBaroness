@@ -61,10 +61,11 @@
         </div>
       </section>
 
-      <section class="menu">
-        <div class="section container">
+      <section id="menu">
+        <div class="section-container">
           <div class="section-header">
             <h2 class="section-title">THE ARTISANAL MENU</h2>
+            <p class="section-subtitle">Categorized and prepared with culinary discipline inspired by the arcane origins of the Astral universe.</p>
           </div>
 
           <div class="menu-system">
@@ -392,6 +393,92 @@
             </div>
         </div>
 
+        <section id="parlors">
+          <div class="section-container">
+            <div class="section-header">
+              <h2 class="section-title gold-gradient-text">RESERVE A PRIVATE PARLOR</h2>
+              <p class="section-subtitle">Discreet booths and curtain-sealed alcoves for intimate conversations or private gatherings.</p>
+            </div>
+
+            <div class="parlor-grid">
+              <div class="deco-border parlor-card">
+                <div>
+                  <span class="parlor-badge">Booth I • Main Lounge</span>
+                  <h3 class="parlor-name">The Amber Hearth Alcove</h3>
+                  <p class="parlor-desc">Positioned beside the gaslight hearth with hand-carved mahogany seating and warm amber glows. Ideal for small groups.</p>
+                </div>
+                <span class="btn-dossier">Capacity: 2-4 Guests</span>
+              </div>
+
+              <div class="deco-border parlor-card">
+                <div>
+                  <span class="parlor-badge">Parlor II • Secluded</span>
+                  <h3 class="parlor-name">The Velvet Rune Chamber</h3>
+                  <p class="parlor-desc">Enclosed in heavy burgundy velvet drapes with acoustic sound dampening and private host service.</p>
+                </div>
+                <span class="btn-dossier">Capacity: 4-6 Guests</span>
+              </div>
+
+              <div class="deco-border parlor-card">
+                <div>
+                  <span class="parlor-badge">Parlor III • Upper Level</span>
+                  <h3 class="parlor-name">The Patron's Mezzanine</h3>
+                  <p class="parlor-desc">An elevated private balcony overlooking Lower Manhattan's skyline.</p>
+                </div>
+                <span class="btn-dossier">Capacity: 6-10 Guests</span>
+              </div>
+            </div>
+
+            <div class="deco-border reservation-form-container">
+              <form action="#parlors" method="get">
+                <div class="form-grid form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Guest Name</label>
+                    <input type="text" class="form-input" placeholder="e.g. Lady Jeanne Geist" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Contact Email</label>
+                    <input type="email" class="form-input" placeholder="patron@thecursedapple.com" required>
+                  </div>
+                </div>
+
+                <div class="form-grid form-grid-3">
+                  <div class="form-group">
+                    <label class="form-label">Reservation Date</label>
+                    <input type="date" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Preferred Hour</label>
+                    <select class="form-select">
+                      <option>17:00 (Happy Hour)</option>
+                      <option>19:00 (Prime Time)</option>
+                      <option>22:00 (Nightcap Hour)</option>
+                      <option>00:00 (Midnight)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Preferred Seating</label>
+                    <select class="form-select">
+                      <option>The Amber Hearth Alcove</option>
+                      <option>The Velvet Rune Chamber</option>
+                      <option>The Patron's Mezzanine</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-group special-request">
+                  <label class="form-label">Special Requests & Notes</label>
+                  <textarea class="form-textarea" rows="4" placeholder="Dietary preferences or discretionary seating requests..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary submit-reservation">
+                  Submit Reservation Request
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
 
     </main>
   </body>
