@@ -1,3 +1,10 @@
+/* ==========================================================
+   The Baroness - stylesheet
+   order: fonts > variables > base > reusable bits > sections
+   ========================================================== */
+
+/* ===== fonts ===== */
+
 @font-face {
   font-family: "Cinzel";
   src: url("./fonts/Cinzel-Regular.ttf") format("truetype");
@@ -54,30 +61,37 @@
   font-display: swap;
 }
 
+/* ===== variables ===== */
+
 :root {
+  /* colours */
   --bg-dark: #09090d;
   --bg-surface: #12121a;
-  --bg-surface-light: #1a1a26;
   --gold-primary: #d4af37;
   --gold-light: #f5e5b8;
   --gold-dark: #8a7020;
   --amber-glow: #e67e22;
-  --soul-cyan: #38bdf8;
-  --emerald-accent: #0f382c;
   --border-gold: rgba(212, 175, 55, 0.25);
   --border-gold-glow: rgba(212, 175, 55, 0.5);
   --text-main: #e2e8f0;
   --text-muted: #94a3b8;
-  --font-title: "Cinzel Decorative", serif;
-  --font-deco: "Cinzel", serif;
-  --font-sub: "Cormorant Garamond", serif;
-  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* fonts */
+  --font-display: "Cinzel Decorative", serif; /* h1 + brand name */
+  --font-heading: "Cinzel", serif; /* h2, h3, nav, buttons, labels */
+  --font-subtitle: "Cormorant Garamond", serif; /* italic subtitles + lore */
+  --font-body: "Plus Jakarta Sans", sans-serif; /* paragraphs and inputs */
 }
+
+/* ===== base ===== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -90,6 +104,7 @@ body {
   position: relative;
 }
 
+/* the double gold frame used on every card */
 .deco-border {
   position: relative;
   border: 1px solid var(--border-gold);
@@ -112,6 +127,99 @@ body {
   border-color: var(--border-gold-glow);
   box-shadow: 0 8px 32px rgba(212, 175, 55, 0.08);
 }
+
+/* ===== buttons ===== */
+
+.btn-primary {
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    var(--gold-dark) 0%,
+    var(--gold-primary) 50%,
+    var(--gold-dark) 100%
+  );
+  color: #000;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  background: rgba(18, 18, 26, 0.8);
+  border: 1px solid var(--border-gold-glow);
+  color: var(--gold-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+/* the "Reservations" button that lives inside the navbar */
+.btn-reservation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--gold-primary);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-primary);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-reservation:hover {
+  background: rgba(212, 175, 55, 0.25);
+  color: var(--gold-light);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* small gold link at the bottom of the cards */
+.btn-dossier {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.btn-dossier:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+/* ===== header / navbar ===== */
 
 header {
   position: fixed;
@@ -162,7 +270,7 @@ header {
 }
 
 .brand-title {
-  font-family: var(--font-title);
+  font-family: var(--font-display);
   font-size: 1.1rem;
   letter-spacing: 0.2em;
   font-weight: 700;
@@ -171,7 +279,7 @@ header {
 }
 
 .brand-sub {
-  font-family: var(--font-sub);
+  font-family: var(--font-subtitle);
   font-style: italic;
   font-size: 0.8rem;
   color: rgba(212, 175, 55, 0.7);
@@ -188,7 +296,7 @@ header {
 }
 
 .nav-links a {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -201,6 +309,7 @@ header {
   color: var(--gold-primary);
 }
 
+/* burger icon, only shows up on small screens */
 .nav-toggle-btn {
   display: none;
   flex-direction: column;
@@ -219,87 +328,7 @@ header {
   transition: all 0.3s ease;
 }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8rem 2rem 4rem;
-  background-image: url('mainLobby.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hero-content {
-  text-align: center;
-  max-width: 800px;
-}
-
-.hero-title {
-  font-family: var(--font-title);
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold-primary);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.btn-menu {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.6rem;
-  border-radius: 4px;
-  border: 1px solid var(--gold-primary);
-  background: var(--gold-primary);
-  color: #09090d;
-  font-family: var(--font-deco);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-menu:hover {
-  background: var(--gold-light);
-  border-color: var(--gold-light);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
-
-.btn-reservation {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.6rem;
-  border-radius: 4px;
-  border: 1px solid var(--gold-primary);
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--gold-primary);
-  font-family: var(--font-deco);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-reservation:hover {
-  background: rgba(212, 175, 55, 0.25);
-  color: var(--gold-light);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-}
-
+/* mobile menu: the hidden checkbox opens the side drawer */
 @media (max-width: 960px) {
   header {
     padding: 0.8rem 1.25rem;
@@ -327,36 +356,25 @@ header {
     box-shadow: -15px 0 35px rgba(0, 0, 0, 0.9);
   }
 
+  .btn-reservation {
+    width: 100%;
+  }
+
   .nav-toggle:checked ~ .nav-links {
     right: 0;
   }
 
+  /* burger turns into an X */
   .nav-toggle:checked ~ .nav-toggle-btn span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .nav-toggle:checked ~ .nav-toggle-btn span:nth-child(2) {
     opacity: 0;
   }
+
   .nav-toggle:checked ~ .nav-toggle-btn span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .hero-title {
-    font-size: 2.2rem;
-    letter-spacing: 0.15em;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .btn-menu,
-  .btn-reservation {
-    width: 100%;
   }
 }
 
@@ -372,11 +390,128 @@ header {
   }
 }
 
+/* ===== hero ===== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  background-image: url("mainLobby.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+/* ===== shared section layout ===== */
+
+section {
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-tag {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  color: var(--gold-primary);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-subtitle);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* has to stay after .section-title so the transparent colour wins */
+.gold-gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--gold-light) 0%,
+    var(--gold-primary) 50%,
+    var(--gold-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===== menu section ===== */
+
 #menu {
   background: rgba(0, 0, 0, 0.4);
   border-top: 1px solid var(--border-gold);
 }
 
+/* the radios are hidden, the labels below are what you actually click */
 .menu-radio {
   display: none;
 }
@@ -395,7 +530,7 @@ header {
   border: 1px solid var(--border-gold);
   background: rgba(18, 18, 26, 0.6);
   color: var(--text-main);
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -427,6 +562,14 @@ header {
   animation: fadeIn 0.4s ease forwards;
 }
 
+/* only the panel matching the checked radio shows up */
+#radio-coffee:checked ~ .menu-panels #panel-coffee,
+#radio-tea:checked ~ .menu-panels #panel-tea,
+#radio-bakery:checked ~ .menu-panels #panel-bakery,
+#radio-cocktails:checked ~ .menu-panels #panel-cocktails {
+  display: grid;
+}
+
 @media (min-width: 768px) {
   .menu-panel {
     grid-template-columns: repeat(2, 1fr);
@@ -437,13 +580,6 @@ header {
   .menu-panel {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-#radio-coffee:checked ~ .menu-panels #panel-coffee,
-#radio-tea:checked ~ .menu-panels #panel-tea,
-#radio-bakery:checked ~ .menu-panels #panel-bakery,
-#radio-cocktails:checked ~ .menu-panels #panel-cocktails {
-  display: grid;
 }
 
 @keyframes fadeIn {
@@ -457,7 +593,6 @@ header {
   }
 }
 
-/* Menu Item Card Styling */
 .menu-card {
   padding: 2rem;
   display: flex;
@@ -475,21 +610,23 @@ header {
 }
 
 .item-title {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 1.05rem;
   color: var(--gold-light);
   font-weight: 600;
 }
 
 .item-price {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.9rem;
   color: var(--amber-glow);
   font-weight: 700;
   white-space: nowrap;
 }
 
-.item-desc {
+/* same look for both card descriptions, so they share one rule */
+.item-desc,
+.parlor-desc {
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.6;
@@ -504,22 +641,7 @@ header {
   justify-content: space-between;
 }
 
-.btn-dossier {
-  font-family: var(--font-deco);
-  font-size: 0.68rem;
-  letter-spacing: 0.15em;
-  color: var(--gold-primary);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.3s ease;
-}
-
-.btn-dossier:hover {
-  color: var(--gold-light);
-  text-decoration: underline;
-}
+/* ===== item pop ups (done with :target, no javascript) ===== */
 
 .modal-overlay {
   position: fixed;
@@ -536,7 +658,6 @@ header {
   transition: opacity 0.3s ease;
 }
 
-/* Pure CSS Lightbox Trigger using :target */
 .modal-overlay:target {
   opacity: 1;
   pointer-events: auto;
@@ -575,7 +696,7 @@ header {
 }
 
 .modal-tag {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -585,20 +706,20 @@ header {
 }
 
 .modal-title {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   margin-bottom: 0.2rem;
 }
 
 .modal-price {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   color: var(--amber-glow);
   margin-bottom: 1.5rem;
 }
 
 .modal-section-title {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -615,102 +736,276 @@ header {
 }
 
 .modal-lore-text {
-  font-family: var(--font-sub);
+  font-family: var(--font-subtitle);
   font-style: italic;
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
 
-.btn-primary {
-  padding: 0.9rem 2.2rem;
-  border-radius: 4px;
+/* ===== events slider ===== */
+
+#events {
+  padding-bottom: 14rem;
+}
+
+.hero-events {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 550px;
+  max-height: 750px;
+  background: #000;
+  overflow: hidden;
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  margin-bottom: 6rem;
+}
+
+/* three hidden radios control which slide is showing */
+.hero-events input[type="radio"] {
+  display: none;
+}
+
+.hero-slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* the track holding the 3 slides side by side */
+.hero-slides-container {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slide {
+  width: 33.3333%;
+  height: 100%;
+  position: relative;
+  background-color: #09090d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem 6%;
+  overflow: hidden;
+}
+
+/* each slide picks its own picture through --bg-img */
+.event-seance {
+  --bg-img: url("images/seance.jpg");
+}
+
+.event-salon {
+  --bg-img: url("paige.png");
+}
+
+.event-poker {
+  --bg-img: url("poker.png");
+}
+
+/* the picture on the left, faded into the background on every side */
+.hero-slide::after {
+  content: "";
+  order: 1;
+  position: relative;
+  width: 42%;
+  height: clamp(320px, 50vh, 480px);
+  background-image:
+    linear-gradient(
+      to right,
+      #09090d 0%,
+      rgba(9, 9, 13, 0) 25%,
+      rgba(9, 9, 13, 0) 75%,
+      #09090d 100%
+    ),
+    linear-gradient(
+      to top,
+      #09090d 0%,
+      rgba(9, 9, 13, 0) 25%,
+      rgba(9, 9, 13, 0) 75%,
+      #09090d 100%
+    ),
+    var(--bg-img);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* dark fade at the bottom so the text stays readable */
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background: linear-gradient(
-    135deg,
-    var(--gold-dark) 0%,
-    var(--gold-primary) 50%,
-    var(--gold-dark) 100%
+    to top,
+    #09090d 0%,
+    rgba(9, 9, 13, 0.9) 25%,
+    transparent 60%
   );
-  color: #000;
-  font-family: var(--font-deco);
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.btn-primary:hover {
-  filter: brightness(1.15);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  padding: 0.9rem 2.2rem;
-  border-radius: 4px;
-  background: rgba(18, 18, 26, 0.8);
-  border: 1px solid var(--border-gold-glow);
-  color: var(--gold-primary);
-  font-family: var(--font-deco);
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  border-color: var(--gold-primary);
-  background: rgba(212, 175, 55, 0.1);
-  transform: translateY(-2px);
-}
-
-section {
-  padding: 6rem 2rem;
+.event-content {
+  order: 2;
   position: relative;
   z-index: 2;
+  width: 50%;
+  max-width: 520px;
+  margin: 0;
+  text-align: left;
 }
 
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.section-tag {
-  font-family: var(--font-title);
-  font-size: 0.7rem;
+.event-day {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold-primary);
-  display: block;
+  color: var(--amber-glow);
   margin-bottom: 0.5rem;
+  display: block;
 }
 
-.section-title {
-  font-family: var(--font-deco);
-  color: var(--gold-primary);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  letter-spacing: 0.1em;
+.event-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  color: var(--gold-light);
   margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
-.section-subtitle {
-  font-family: var(--font-sub);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: 0 auto;
+.event-desc {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
+
+.event-time {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--gold-primary);
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+/* slide the track left depending on the checked radio */
+#slide-mon:checked ~ .hero-slider-wrapper .hero-slides-container {
+  transform: translateX(0%);
+}
+
+#slide-wed:checked ~ .hero-slider-wrapper .hero-slides-container {
+  transform: translateX(-33.3333%);
+}
+
+#slide-fri:checked ~ .hero-slider-wrapper .hero-slides-container {
+  transform: translateX(-66.6666%);
+}
+
+.hero-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.arrow-group {
+  display: none;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.prev-arrow,
+.next-arrow {
+  pointer-events: auto;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--gold-light);
+  background: rgba(9, 9, 13, 0.6);
+  border: 1px solid var(--border-gold);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+  background: var(--gold-primary);
+  color: #000;
+  box-shadow: 0 0 15px var(--gold-primary);
+}
+
+/* each slide has its own pair of arrows, only the active one shows */
+#slide-mon:checked ~ .hero-slider-wrapper .group-mon,
+#slide-wed:checked ~ .hero-slider-wrapper .group-wed,
+#slide-fri:checked ~ .hero-slider-wrapper .group-fri {
+  display: flex;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dot {
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--border-gold);
+  background: rgba(9, 9, 13, 0.8);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.dot:hover {
+  border-color: var(--gold-primary);
+}
+
+.dot-text {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+#slide-mon:checked ~ .hero-slider-wrapper .dot-mon,
+#slide-wed:checked ~ .hero-slider-wrapper .dot-wed,
+#slide-fri:checked ~ .hero-slider-wrapper .dot-fri {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+}
+
+#slide-mon:checked ~ .hero-slider-wrapper .dot-mon .dot-text,
+#slide-wed:checked ~ .hero-slider-wrapper .dot-wed .dot-text,
+#slide-fri:checked ~ .hero-slider-wrapper .dot-fri .dot-text {
+  color: #000;
+  font-weight: bold;
+}
+
+/* ===== private parlors ===== */
 
 .parlor-grid {
   display: grid;
@@ -733,7 +1028,7 @@ section {
 }
 
 .parlor-badge {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -743,20 +1038,14 @@ section {
 }
 
 .parlor-name {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   color: var(--gold-light);
   margin-bottom: 0.8rem;
 }
 
-.parlor-desc {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
+/* ===== reservation form ===== */
 
-/* Pure HTML Reservation Form */
 .reservation-form-container {
   max-width: 720px;
   margin: 0 auto;
@@ -774,6 +1063,7 @@ section {
   .form-grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .form-grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -786,7 +1076,7 @@ section {
 }
 
 .form-label {
-  font-family: var(--font-deco);
+  font-family: var(--font-heading);
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -815,12 +1105,133 @@ section {
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
+.special-request {
+  margin-bottom: 2rem;
+}
+
+/* the submit is a <button>, so it needs a few extra resets */
 .submit-reservation {
-  width: 100%; 
-  border: none; 
+  width: 100%;
+  border: none;
   cursor: pointer;
 }
 
-.special-request {
-  margin-bottom: 2rem;
+/* ===== location and hours ===== */
+
+#location {
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid var(--border-gold);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.location-intro {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-icon {
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.info-title {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.info-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.map-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+/* same circle as the navbar logo but bigger, so it comes after .logo-icon */
+.map-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.map-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.map-subtitle {
+  font-family: var(--font-subtitle);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.map-badge {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-gold);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.map-tag {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  display: block;
+  margin-bottom: 0.5rem;
 }
