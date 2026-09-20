@@ -6,30 +6,23 @@
     <title>The Baroness</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
       <div class="nav-container">
         <a href="#" class="brand-logo">
           <div class="logo-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 640 640"
-              class="mystic-eye"
-            >
-              <path
-                fill="currentColor"
-                d="M320 96C239.2 96 174.5 132.8 127.4 176.6C80.6 220.1 49.3 272 34.4 307.7C31.1 315.6 31.1 324.4 34.4 332.3C49.3 368 80.6 420 127.4 463.4C174.5 507.1 239.2 544 320 544C400.8 544 465.5 507.2 512.6 463.4C559.4 419.9 590.7 368 605.6 332.3C608.9 324.4 608.9 315.6 605.6 307.7C590.7 272 559.4 220 512.6 176.6C465.5 132.9 400.8 96 320 96zM176 320C176 240.5 240.5 176 320 176C399.5 176 464 240.5 464 320C464 399.5 399.5 464 320 464C240.5 464 176 399.5 176 320zM320 256C320 291.3 291.3 320 256 320C244.5 320 233.7 317 224.3 311.6C223.3 322.5 224.2 333.7 227.2 344.8C240.9 396 293.6 426.4 344.8 412.7C396 399 426.4 346.3 412.7 295.1C400.5 249.4 357.2 220.3 311.6 224.3C316.9 233.6 320 244.4 320 256z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mystic-eye">
+              <path fill="currentColor" d="M320 96C239.2 96 174.5 132.8 127.4 176.6C80.6 220.1 49.3 272 34.4 307.7C31.1 315.6 31.1 324.4 34.4 332.3C49.3 368 80.6 420 127.4 463.4C174.5 507.1 239.2 544 320 544C400.8 544 465.5 507.2 512.6 463.4C559.4 419.9 590.7 368 605.6 332.3C608.9 324.4 608.9 315.6 605.6 307.7C590.7 272 559.4 220 512.6 176.6C465.5 132.9 400.8 96 320 96zM176 320C176 240.5 240.5 176 320 176C399.5 176 464 240.5 464 320C464 399.5 399.5 464 320 464C240.5 464 176 399.5 176 320zM320 256C320 291.3 291.3 320 256 320C244.5 320 233.7 317 224.3 311.6C223.3 322.5 224.2 333.7 227.2 344.8C240.9 396 293.6 426.4 344.8 412.7C396 399 426.4 346.3 412.7 295.1C400.5 249.4 357.2 220.3 311.6 224.3C316.9 233.6 320 244.4 320 256z" />
             </svg>
           </div>
           <div>
             <span class="brand-title">THE BARONESS</span>
-            <span class="brand-sub"
-              >Café & Midnight Lounge • Lower Manhattan</span
-            >
+            <span class="brand-sub">Café &amp; Midnight Lounge • Lower Manhattan</span>
           </div>
         </a>
 
+        <!-- checkbox + label = burger menu without javascript -->
         <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
         <label for="nav-toggle" class="nav-toggle-btn" aria-label="Toggle Menu">
           <span></span>
@@ -42,7 +35,7 @@
           <li><a href="#menu">The Menu</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#parlors">Private Parlors</a></li>
-          <li><a href="#location">Hours & Location</a></li>
+          <li><a href="#location">Hours &amp; Location</a></li>
           <li><a href="#parlors" class="btn-reservation">Reservations</a></li>
         </ul>
       </div>
@@ -71,45 +64,17 @@
           </div>
 
           <div class="menu-system">
-            <input
-              type="radio"
-              name="menu-category"
-              class="menu-radio"
-              id="radio-coffee"
-              checked
-            />
-            <input
-              type="radio"
-              name="menu-category"
-              class="menu-radio"
-              id="radio-tea"
-            />
-            <input
-              type="radio"
-              name="menu-category"
-              class="menu-radio"
-              id="radio-bakery"
-            />
-            <input
-              type="radio"
-              name="menu-category"
-              class="menu-radio"
-              id="radio-cocktails"
-            />
+            <!-- one radio per menu category, hidden in the css -->
+            <input type="radio" name="menu-category" class="menu-radio" id="radio-coffee" checked />
+            <input type="radio" name="menu-category" class="menu-radio" id="radio-tea" />
+            <input type="radio" name="menu-category" class="menu-radio" id="radio-bakery" />
+            <input type="radio" name="menu-category" class="menu-radio" id="radio-cocktails" />
 
             <div class="menu-tabs">
-              <label for="radio-coffee" class="tab-label"
-                >Essence Roasts & Espresso</label
-              >
-              <label for="radio-tea" class="tab-label"
-                >Botanical Elixirs & Teas</label
-              >
-              <label for="radio-bakery" class="tab-label"
-                >Patisserie & Savories</label
-              >
-              <label for="radio-cocktails" class="tab-label"
-                >Midnight Cocktails</label
-              >
+              <label for="radio-coffee" class="tab-label">Essence Roasts &amp; Espresso</label>
+              <label for="radio-tea" class="tab-label">Botanical Elixirs &amp; Teas</label>
+              <label for="radio-bakery" class="tab-label">Patisserie &amp; Savories</label>
+              <label for="radio-cocktails" class="tab-label">Midnight Cocktails</label>
             </div>
 
             <div class="menu-panels">
@@ -331,7 +296,7 @@
                 <div class="deco-border menu-card">
                   <div>
                     <div class="menu-card-header">
-                      <h3 class="item-title">The Patron's Rye & Velvet</h3>
+                      <h3 class="item-title">The Patron's Rye &amp; Velvet</h3>
                       <span class="item-price">$16.00</span>
                     </div>
                     <p class="item-desc">
@@ -397,10 +362,11 @@
         </div>
       </section>
 
+      <!-- pop ups for each menu item, opened with the #modal-item links above -->
       <div id="modal-item-1" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Essence Roasts & Espresso</span>
+          <span class="modal-tag">Essence Roasts &amp; Espresso</span>
           <h3 class="modal-title gold-gradient-text">Spiritist Dark Roast</h3>
           <div class="modal-price">$6.50</div>
           <span class="modal-section-title">Tasting Notes</span>
@@ -419,7 +385,7 @@
       <div id="modal-item-2" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Essence Roasts & Espresso</span>
+          <span class="modal-tag">Essence Roasts &amp; Espresso</span>
           <h3 class="modal-title gold-gradient-text">Infernus Amber Latte</h3>
           <div class="modal-price">$7.50</div>
           <span class="modal-section-title">Tasting Notes</span>
@@ -438,10 +404,8 @@
       <div id="modal-item-3" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Essence Roasts & Espresso</span>
-          <h3 class="modal-title gold-gradient-text">
-            Paradox Temporal Cold Drip
-          </h3>
+          <span class="modal-tag">Essence Roasts &amp; Espresso</span>
+          <h3 class="modal-title gold-gradient-text">Paradox Temporal Cold Drip</h3>
           <div class="modal-price">$8.00</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -459,10 +423,8 @@
       <div id="modal-item-4" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Essence Roasts & Espresso</span>
-          <h3 class="modal-title gold-gradient-text">
-            Ether-Steeped Cold Brew
-          </h3>
+          <span class="modal-tag">Essence Roasts &amp; Espresso</span>
+          <h3 class="modal-title gold-gradient-text">Ether-Steeped Cold Brew</h3>
           <div class="modal-price">$7.50</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -480,7 +442,7 @@
       <div id="modal-item-5" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Essence Roasts & Espresso</span>
+          <span class="modal-tag">Essence Roasts &amp; Espresso</span>
           <h3 class="modal-title gold-gradient-text">The Gilded Mocha</h3>
           <div class="modal-price">$8.50</div>
           <span class="modal-section-title">Tasting Notes</span>
@@ -499,7 +461,7 @@
       <div id="modal-item-6" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Botanical Elixirs & Teas</span>
+          <span class="modal-tag">Botanical Elixirs &amp; Teas</span>
           <h3 class="modal-title gold-gradient-text">Lotus Bloom Tisane</h3>
           <div class="modal-price">$7.00</div>
           <span class="modal-section-title">Tasting Notes</span>
@@ -518,10 +480,8 @@
       <div id="modal-item-7" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Botanical Elixirs & Teas</span>
-          <h3 class="modal-title gold-gradient-text">
-            Ivy's Granite Herbal Tonic
-          </h3>
+          <span class="modal-tag">Botanical Elixirs &amp; Teas</span>
+          <h3 class="modal-title gold-gradient-text">Ivy's Granite Herbal Tonic</h3>
           <div class="modal-price">$6.75</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -531,7 +491,7 @@
           <span class="modal-section-title">Lore Origin</span>
           <p class="modal-lore-text">
             Crafted in honor of the gargoyle guardians who keep watch over New
-            York’s Gothic rooftops.
+            York's Gothic rooftops.
           </p>
         </div>
       </div>
@@ -539,10 +499,8 @@
       <div id="modal-item-8" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Botanical Elixirs & Teas</span>
-          <h3 class="modal-title gold-gradient-text">
-            Starlight Chamomile Blossom
-          </h3>
+          <span class="modal-tag">Botanical Elixirs &amp; Teas</span>
+          <h3 class="modal-title gold-gradient-text">Starlight Chamomile Blossom</h3>
           <div class="modal-price">$7.25</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -560,10 +518,8 @@
       <div id="modal-item-9" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Botanical Elixirs & Teas</span>
-          <h3 class="modal-title gold-gradient-text">
-            Obsidian Smoked Black Tea
-          </h3>
+          <span class="modal-tag">Botanical Elixirs &amp; Teas</span>
+          <h3 class="modal-title gold-gradient-text">Obsidian Smoked Black Tea</h3>
           <div class="modal-price">$6.75</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -581,7 +537,7 @@
       <div id="modal-item-10" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Patisserie & Savories</span>
+          <span class="modal-tag">Patisserie &amp; Savories</span>
           <h3 class="modal-title gold-gradient-text">The Cursed Apple Tart</h3>
           <div class="modal-price">$9.50</div>
           <span class="modal-section-title">Tasting Notes</span>
@@ -592,7 +548,7 @@
           <span class="modal-section-title">Lore Origin</span>
           <p class="modal-lore-text">
             A staple patisserie piece representing the forbidden allure of New
-            York’s arcane secrets.
+            York's arcane secrets.
           </p>
         </div>
       </div>
@@ -600,10 +556,8 @@
       <div id="modal-item-11" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Patisserie & Savories</span>
-          <h3 class="modal-title gold-gradient-text">
-            Smoked Pastrami Sourdough
-          </h3>
+          <span class="modal-tag">Patisserie &amp; Savories</span>
+          <h3 class="modal-title gold-gradient-text">Smoked Pastrami Sourdough</h3>
           <div class="modal-price">$14.50</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -621,10 +575,8 @@
       <div id="modal-item-12" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Patisserie & Savories</span>
-          <h3 class="modal-title gold-gradient-text">
-            Midnight Blackberry Galette
-          </h3>
+          <span class="modal-tag">Patisserie &amp; Savories</span>
+          <h3 class="modal-title gold-gradient-text">Midnight Blackberry Galette</h3>
           <div class="modal-price">$9.00</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -642,10 +594,8 @@
       <div id="modal-item-13" class="modal-overlay">
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
-          <span class="modal-tag">Patisserie & Savories</span>
-          <h3 class="modal-title gold-gradient-text">
-            Truffled Mushroom Tartlet
-          </h3>
+          <span class="modal-tag">Patisserie &amp; Savories</span>
+          <h3 class="modal-title gold-gradient-text">Truffled Mushroom Tartlet</h3>
           <div class="modal-price">$13.50</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -664,9 +614,7 @@
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
           <span class="modal-tag">Midnight Cocktails</span>
-          <h3 class="modal-title gold-gradient-text">
-            The Patron's Rye & Velvet
-          </h3>
+          <h3 class="modal-title gold-gradient-text">The Patron's Rye &amp; Velvet</h3>
           <div class="modal-price">$16.00</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -685,9 +633,7 @@
         <div class="modal-card">
           <a href="#menu" class="modal-close">&times;</a>
           <span class="modal-tag">Midnight Cocktails</span>
-          <h3 class="modal-title gold-gradient-text">
-            Soul-Mist Lavender Fizz
-          </h3>
+          <h3 class="modal-title gold-gradient-text">Soul-Mist Lavender Fizz</h3>
           <div class="modal-price">$15.50</div>
           <span class="modal-section-title">Tasting Notes</span>
           <p class="modal-body-text">
@@ -740,12 +686,88 @@
         </div>
       </div>
 
+      <section id="events" class="hero-events">
+        <div class="section-container">
+          <div class="section-header">
+            <h2 class="section-title">EVENTS</h2>
+            <p class="section-subtitle">
+              Gatherings, nightly rituals, and nocturnal celebrations.
+            </p>
+          </div>
+        </div>
+
+        <!-- one radio per day, they move the slider in the css -->
+        <input type="radio" name="hero-slider" id="slide-mon" checked />
+        <input type="radio" name="hero-slider" id="slide-wed" />
+        <input type="radio" name="hero-slider" id="slide-fri" />
+
+        <div class="hero-slider-wrapper">
+          <div class="hero-slides-container">
+            <div class="hero-slide event-seance">
+              <div class="event-content">
+                <span class="event-day">Monday</span>
+                <h2 class="event-title">The Arcane Séance</h2>
+                <p class="event-desc">
+                  Interactive tarot readings, mediumship circles, and quiet
+                  hours for inner reflection beneath ambient candlelight.
+                </p>
+                <span class="event-time">20:00 - Midnight</span>
+              </div>
+            </div>
+
+            <div class="hero-slide event-salon">
+              <div class="event-content">
+                <span class="event-day">Wednesday</span>
+                <h2 class="event-title">The Cursed Salon</h2>
+                <p class="event-desc">
+                  Dark folklore storytelling, guest authors, and literary
+                  readings in the secluded amber alcove.
+                </p>
+                <span class="event-time">19:30 - 23:00</span>
+              </div>
+            </div>
+
+            <div class="hero-slide event-poker">
+              <div class="event-content">
+                <span class="event-day">Friday</span>
+                <h2 class="event-title">High-Stakes Poker</h2>
+                <p class="event-desc">
+                  Discreet casino night featuring noir blackjack and poker in
+                  the secluded velvet chambers.
+                </p>
+                <span class="event-time">21:00 - Late</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- one arrow pair per slide, only the active one is visible -->
+          <div class="hero-arrows">
+            <div class="arrow-group group-mon">
+              <label for="slide-fri" class="prev-arrow">&#10094;</label>
+              <label for="slide-wed" class="next-arrow">&#10095;</label>
+            </div>
+            <div class="arrow-group group-wed">
+              <label for="slide-mon" class="prev-arrow">&#10094;</label>
+              <label for="slide-fri" class="next-arrow">&#10095;</label>
+            </div>
+            <div class="arrow-group group-fri">
+              <label for="slide-wed" class="prev-arrow">&#10094;</label>
+              <label for="slide-mon" class="next-arrow">&#10095;</label>
+            </div>
+          </div>
+
+          <div class="hero-dots">
+            <label for="slide-mon" class="dot dot-mon"><span class="dot-text">Monday</span></label>
+            <label for="slide-wed" class="dot dot-wed"><span class="dot-text">Wednesday</span></label>
+            <label for="slide-fri" class="dot dot-fri"><span class="dot-text">Friday</span></label>
+          </div>
+        </div>
+      </section>
+
       <section id="parlors">
         <div class="section-container">
           <div class="section-header">
-            <h2 class="section-title gold-gradient-text">
-              RESERVE A PRIVATE PARLOR
-            </h2>
+            <h2 class="section-title gold-gradient-text">RESERVE A PRIVATE PARLOR</h2>
             <p class="section-subtitle">
               Discreet booths and curtain-sealed alcoves for intimate
               conversations or private gatherings.
@@ -794,33 +816,23 @@
             <form action="#parlors" method="get">
               <div class="form-grid form-grid-2">
                 <div class="form-group">
-                  <label class="form-label">Guest Name</label>
-                  <input
-                    type="text"
-                    class="form-input"
-                    placeholder="e.g. Lady Jeanne Geist"
-                    required
-                  />
+                  <label class="form-label" for="guest-name">Guest Name</label>
+                  <input type="text" id="guest-name" class="form-input" placeholder="e.g. Lady Jeanne Geist" required />
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Contact Email</label>
-                  <input
-                    type="email"
-                    class="form-input"
-                    placeholder="patron@thecursedapple.com"
-                    required
-                  />
+                  <label class="form-label" for="guest-email">Contact Email</label>
+                  <input type="email" id="guest-email" class="form-input" placeholder="patron@thecursedapple.com" required />
                 </div>
               </div>
 
               <div class="form-grid form-grid-3">
                 <div class="form-group">
-                  <label class="form-label">Reservation Date</label>
-                  <input type="date" class="form-input" required />
+                  <label class="form-label" for="booking-date">Reservation Date</label>
+                  <input type="date" id="booking-date" class="form-input" required />
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Preferred Hour</label>
-                  <select class="form-select">
+                  <label class="form-label" for="booking-hour">Preferred Hour</label>
+                  <select id="booking-hour" class="form-select">
                     <option>17:00 (Happy Hour)</option>
                     <option>19:00 (Prime Time)</option>
                     <option>22:00 (Nightcap Hour)</option>
@@ -828,8 +840,8 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Preferred Seating</label>
-                  <select class="form-select">
+                  <label class="form-label" for="booking-seat">Preferred Seating</label>
+                  <select id="booking-seat" class="form-select">
                     <option>The Amber Hearth Alcove</option>
                     <option>The Velvet Rune Chamber</option>
                     <option>The Patron's Mezzanine</option>
@@ -838,18 +850,59 @@
               </div>
 
               <div class="form-group special-request">
-                <label class="form-label">Special Requests & Notes</label>
-                <textarea
-                  class="form-textarea"
-                  rows="4"
-                  placeholder="Dietary preferences or discretionary seating requests..."
-                ></textarea>
+                <label class="form-label" for="booking-notes">Special Requests &amp; Notes</label>
+                <textarea id="booking-notes" class="form-textarea" rows="4" placeholder="Dietary preferences or discretionary seating requests..."></textarea>
               </div>
 
               <button type="submit" class="btn-primary submit-reservation">
                 Submit Reservation Request
               </button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="location">
+        <div class="section-container">
+          <div class="location-grid">
+            <div>
+              <span class="map-tag">Visit Our Establishment</span>
+              <h2 class="section-title gold-gradient-text">LOCATION &amp; HOURS</h2>
+              <p class="location-intro">
+                Situated at 248 Greenwich St in Lower Manhattan. Access is
+                through the wrought-iron archway beside the historic apothecary.
+                Look for the illuminated brass eye lantern.
+              </p>
+
+              <ul class="info-list">
+                <li class="info-item">
+                  <i class="fa-solid fa-location-dot info-icon"></i>
+                  <div>
+                    <span class="info-title">ADDRESS</span>
+                    <span class="info-text">248 Greenwich Street (Sub-Level), Lower Manhattan, NY</span>
+                  </div>
+                </li>
+                <li class="info-item">
+                  <i class="fa-solid fa-clock info-icon"></i>
+                  <div>
+                    <span class="info-title">HOUSE HOURS</span>
+                    <span class="info-text">Weekdays: 17:00 – 02:00</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="deco-border map-card">
+              <div class="logo-icon map-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3 class="map-title">LOWER MANHATTAN DISTRICT</h3>
+              <p class="map-subtitle">
+                Accessible via 7th Avenue Tram Line or Greenwich Underground
+                Station
+              </p>
+              <span class="map-badge">Discreet Entry • Lantern Lit</span>
+            </div>
           </div>
         </div>
       </section>
