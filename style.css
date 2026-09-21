@@ -67,11 +67,19 @@
   /* colours */
   --bg-dark: #09090d;
   --bg-surface: #12121a;
+  --bg-surface-light: #1a1a26;
   --bg-events: #000000; /* deliberately darker than --bg-dark, so the events block reads as its own space */
+  --bg-grad: linear-gradient(
+    to bottom,
+    var(--bg-events) 0%,
+    var(--bg-surface) 100%
+  );
   --gold-primary: #d4af37;
   --gold-light: #f5e5b8;
   --gold-dark: #8a7020;
   --amber-glow: #e67e22;
+  --soul-cyan: #38bdf8;
+  --emerald-accent: #0f382c;
   --border-gold: rgba(212, 175, 55, 0.25);
   --border-gold-glow: rgba(212, 175, 55, 0.5);
   --text-main: #e2e8f0;
@@ -247,6 +255,7 @@ header {
   align-items: center;
   gap: 1rem;
   text-decoration: none;
+  margin-left: -10%;
 }
 
 .logo-icon {
@@ -282,8 +291,8 @@ header {
 .brand-sub {
   font-family: var(--font-subtitle);
   font-style: italic;
-  font-size: 0.8rem;
-  color: rgba(212, 175, 55, 0.7);
+  font-size: 0.9em;
+  color: var(--gold-primary);
   letter-spacing: 0.15em;
   display: block;
   margin-top: 4px;
@@ -333,6 +342,10 @@ header {
 @media (max-width: 960px) {
   header {
     padding: 0.8rem 1.25rem;
+  }
+
+  .brand-logo {
+    margin-left: 10%;
   }
 
   .nav-toggle-btn {
@@ -486,7 +499,7 @@ section {
 .section-subtitle {
   font-family: var(--font-subtitle);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.2em;
   color: var(--text-muted);
   max-width: 600px;
   margin: 0 auto;
@@ -521,7 +534,7 @@ section {
    record rather than the italic subtitle style used elsewhere */
 .lore-text {
   font-family: var(--font-subtitle);
-  font-size: 1.05rem;
+  font-size: 1.2em;
   line-height: 1.85;
   color: var(--text-main);
   margin-bottom: 1.5rem;
