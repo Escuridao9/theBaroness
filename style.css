@@ -211,7 +211,8 @@ body {
 }
 
 /* small gold link at the bottom of the cards */
-.btn-dossier {
+.btn-dossier,
+.capacity {
   font-family: var(--font-heading);
   font-size: 0.68rem;
   letter-spacing: 0.15em;
