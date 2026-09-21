@@ -1316,6 +1316,8 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 340px;
+  background-image: url("minimap.png");
+  background-position: center;
 }
 
 /* same circle as the navbar logo but bigger, so it comes after .logo-icon */
