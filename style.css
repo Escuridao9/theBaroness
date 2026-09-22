@@ -413,7 +413,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 8rem 2rem 4rem;
-  background-image: url("mainLobby.png");
+  background-image: url("./images/mainLobby.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -876,15 +876,15 @@ section {
 
 /* each slide picks its own picture through --bg-img */
 .event-seance {
-  --bg-img: url("graves.png");
+  --bg-img: url("./images/graves.png");
 }
 
 .event-salon {
-  --bg-img: url("paige.png");
+  --bg-img: url("./images/paige.png");
 }
 
 .event-poker {
-  --bg-img: url("poker.png");
+  --bg-img: url("./images/poker.png");
 }
 
 /* the picture on the left, faded into the background on every side */
@@ -1317,7 +1317,7 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 340px;
-  background-image: url("minimap.png");
+  background-image: url("./images/minimap.png");
   background-position: center;
 }
 
@@ -1403,7 +1403,7 @@ footer {
 }
 
 .footer-text {
-  font-family: var(--font-sub);
+  font-family: var(--font-subtitle);
   font-style: italic;
   font-size: 0.9rem;
   color: var(--text-muted);
