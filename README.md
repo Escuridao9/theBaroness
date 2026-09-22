@@ -80,23 +80,11 @@ The overall design aims to create the feeling of entering an old, mysterious but
 
 ## Inspiration
 
-The project takes visual inspiration from the atmosphere and art direction of **Deadlock**, particularly its darker occult and vintage-inspired aesthetic, while adapting those ideas into a fictional café setting.
+The project takes visual inspiration from the atmosphere and art direction of **Deadlock**, particularly its darker occult and vintage-inspired aesthetic, while adapting those ideas into a fictional café setting. It also takes inspiration from a google stitch prompt that can be seen here:
+
+https://stitch.withgoogle.com/projects/12294610705424550843
 
 The website is an original student project and is not affiliated with or endorsed by Valve or Deadlock.
-
-## Running the Project
-
-No build tools or dependencies are required.
-
-Simply clone the repository:
-
-```bash
-git clone https://github.com/your-username/theCursedApple.git
-```
-
-Then open `index.html` in a web browser.
-
-Alternatively, the project can be hosted using **GitHub Pages**.
 
 ## Purpose
 
