@@ -549,7 +549,23 @@ section {
 
 /* the radios are hidden, the labels below are what you actually click */
 .menu-radio {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#radio-coffee:focus-visible ~ .menu-tabs label[for="radio-coffee"],
+#radio-tea:focus-visible ~ .menu-tabs label[for="radio-tea"],
+#radio-bakery:focus-visible ~ .menu-tabs label[for="radio-bakery"],
+#radio-cocktails:focus-visible ~ .menu-tabs label[for="radio-cocktails"] {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 3px;
 }
 
 .menu-tabs {
