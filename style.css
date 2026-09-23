@@ -500,7 +500,7 @@ section {
 .section-subtitle {
   font-family: var(--font-subtitle);
   font-style: italic;
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: var(--text-muted);
   max-width: 800px;
   margin: 0 auto;
@@ -738,7 +738,7 @@ section {
 
 .modal-tag {
   font-family: var(--font-heading);
-  font-size: 0.65rem;
+  font-size: 1em;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold-primary);
@@ -748,7 +748,7 @@ section {
 
 .modal-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.5em;
   margin-bottom: 0.2rem;
 }
 
@@ -761,7 +761,7 @@ section {
 
 .modal-section-title {
   font-family: var(--font-heading);
-  font-size: 0.7rem;
+  font-size: 0.9em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold-primary);
@@ -770,7 +770,7 @@ section {
 }
 
 .modal-body-text {
-  font-size: 0.85rem;
+  font-size: 0.95em;
   color: var(--text-main);
   margin-bottom: 1.2rem;
   line-height: 1.6;
@@ -779,7 +779,7 @@ section {
 .modal-lore-text {
   font-family: var(--font-subtitle);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1.1em;
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -990,7 +990,6 @@ section {
   color: var(--gold-light);
   margin-bottom: 1rem;
   line-height: 1.15;
-  white-space: nowrap;
 }
 
 .event-desc {
