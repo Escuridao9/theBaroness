@@ -784,6 +784,38 @@ section {
   line-height: 1.6;
 }
 
+/* modal variant that shows only a booth picture, with the X on top of it */
+.modal-card-image {
+  position: relative;
+  /* sized to the image itself, not the overlay, so it never grows
+     taller than the screen and pushes the close button out of view */
+  display: inline-block;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.modal-booth-image {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border: 1px solid var(--gold-primary);
+}
+
+.modal-close-image {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  z-index: 1;
+}
+
 /* ===== events slider ===== */
 
 #events {
@@ -1169,6 +1201,16 @@ section {
   font-size: 1.2rem;
   color: var(--gold-light);
   margin-bottom: 0.8rem;
+}
+
+/* row holding the capacity text and the "View Booth" link */
+.parlor-card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* ===== reservation form ===== */
