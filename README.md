@@ -53,7 +53,7 @@ Interactive components such as the menu item modals and event navigation are imp
 ## Project Structure
 
 ```text
-theCursedApple/
+theBaroness/
 │
 ├── index.html
 ├── style.css
