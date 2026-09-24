@@ -1253,6 +1253,13 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  /* grid items default to min-width: auto, which stops them from
+     shrinking below their content's natural minimum size. Safari's
+     native date picker has a wider natural size than what we tested
+     in the simulator, so it was pushing this column wider than the
+     grid track. min-width: 0 lets it shrink to fit like everything
+     else. */
+  min-width: 0;
 }
 
 .form-label {
@@ -1267,6 +1274,7 @@ section {
 .form-select,
 .form-textarea {
   width: 100%;
+  min-width: 0;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid var(--border-gold);
   border-radius: 4px;
