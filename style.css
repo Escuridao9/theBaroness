@@ -1293,6 +1293,27 @@ section {
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
+/* WebKit (Safari, and every other iOS browser since Apple forces
+   them to use WebKit) draws input[type="date"] with its own native
+   day/month/year layout and calendar icon. That native drawing has
+   its own minimum size which can spill past the box we declared,
+   no matter what width/min-width we set on the element or its
+   parents. -webkit-appearance: none turns off that native drawing
+   so our own width/padding/border rules are what actually get
+   drawn. */
+.form-input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* with the native chrome turned off, the little calendar icon
+   defaults to a dark icon that disappears against our dark
+   background, so brighten it back up */
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
 .special-request {
   margin-bottom: 2rem;
 }
