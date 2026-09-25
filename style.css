@@ -237,10 +237,22 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(9, 9, 13, 0.9);
-  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-gold);
   padding: 1rem 2rem;
+}
+
+/* the blur lives on a pseudo-element, not on header itself.
+   reason: backdrop-filter on header would trap the fixed mobile
+   menu inside header's box on Safari/iOS, so the burger toggles
+   but the menu never actually shows up on the screen. */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(9, 9, 13, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .nav-container {
@@ -1253,6 +1265,13 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  /* grid items default to min-width: auto, which stops them from
+     shrinking below their content's natural minimum size. Safari's
+     native date picker has a wider natural size than what we tested
+     in the simulator, so it was pushing this column wider than the
+     grid track. min-width: 0 lets it shrink to fit like everything
+     else. */
+  min-width: 0;
 }
 
 .form-label {
@@ -1267,6 +1286,7 @@ section {
 .form-select,
 .form-textarea {
   width: 100%;
+  min-width: 0;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid var(--border-gold);
   border-radius: 4px;
@@ -1283,6 +1303,27 @@ section {
 .form-textarea:focus {
   border-color: var(--gold-primary);
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* WebKit (Safari, and every other iOS browser since Apple forces
+   them to use WebKit) draws input[type="date"] with its own native
+   day/month/year layout and calendar icon. That native drawing has
+   its own minimum size which can spill past the box we declared,
+   no matter what width/min-width we set on the element or its
+   parents. -webkit-appearance: none turns off that native drawing
+   so our own width/padding/border rules are what actually get
+   drawn. */
+.form-input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* with the native chrome turned off, the little calendar icon
+   defaults to a dark icon that disappears against our dark
+   background, so brighten it back up */
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.8;
 }
 
 .special-request {
